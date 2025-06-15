@@ -6,34 +6,38 @@ import { Card, CardContent } from "@/components/ui/card";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include product management, user authentication, and order processing.",
+      title: "Spotify Data Pipeline",
+      description: "Built a scalable pipeline to extract data from Spotify API, transform using AWS services, and load into Snowflake for analytics and Power BI reporting. Implemented Airflow DAG for automated data extraction and enhanced reporting efficiency by 55%.",
+      image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&w=800&q=80",
+      tags: ["Airflow", "Apache Spark", "Amazon S3", "Snowflake", "Power BI"],
+      date: "August 2024",
+      liveUrl: "#",
+      githubUrl: "#"
+    },
+    {
+      title: "E-commerce Data Pipeline",
+      description: "Developed an end-to-end data pipeline to ingest raw data into Azure Data Lake Storage, transform using Apache Spark on Databricks, and create interactive Power BI dashboards. Achieved 30% faster data processing through optimized Apache Spark implementation.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      tags: ["Azure Data Lake", "Apache Spark", "Power BI", "PySpark", "Databricks"],
+      date: "February 2025",
       liveUrl: "#",
       githubUrl: "#"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800&q=80",
-      tags: ["Vue.js", "Firebase", "Tailwind CSS"],
+      title: "Healthcare Data Analytics Platform",
+      description: "Ingested and processed large volumes of healthcare data using Azure Data Factory. Developed scalable ETL pipelines in Databricks with PySpark, ensuring HIPAA compliance. Created advanced Power BI dashboards for quality metrics and performance analytics.",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80",
+      tags: ["Azure Data Factory", "Databricks", "PySpark", "Power BI", "Healthcare"],
+      date: "2020-2023",
       liveUrl: "#",
       githubUrl: "#"
     },
     {
-      title: "Weather Dashboard",
-      description: "A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=800&q=80",
-      tags: ["React", "OpenWeather API", "Chart.js"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Portfolio Website",
-      description: "A responsive portfolio website with modern design, smooth animations, and optimized performance.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80",
-      tags: ["Next.js", "TypeScript", "Framer Motion"],
+      title: "Snowflake Data Migration",
+      description: "Migrated reporting workflows from traditional systems to Snowflake, reducing query execution time by 40% and improving data accessibility. Built centralized Data Dictionary and standardized metrics for improved collaboration and data governance.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      tags: ["Snowflake", "SQL", "Data Migration", "Performance Optimization"],
+      date: "2022-2023",
       liveUrl: "#",
       githubUrl: "#"
     }
@@ -47,8 +51,8 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Here are some of my recent projects that showcase my skills and passion for creating 
-            meaningful digital experiences.
+            Here are some key data engineering and analytics projects that showcase my experience 
+            in building scalable data pipelines and delivering actionable business insights.
           </p>
         </div>
         
@@ -62,16 +66,19 @@ const Projects = () => {
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium text-slate-700">
+                  {project.date}
+                </div>
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{project.title}</h3>
-                <p className="text-slate-600 mb-4">{project.description}</p>
+                <p className="text-slate-600 mb-4 text-sm leading-relaxed">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, tagIndex) => (
                     <span 
                       key={tagIndex}
-                      className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-sm rounded-full"
+                      className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-xs rounded-full"
                     >
                       {tag}
                     </span>
@@ -79,12 +86,12 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <Button variant="outline" size="sm" className="flex items-center gap-2 hover:bg-slate-100">
-                    <ExternalLink size={16} />
+                  <Button variant="outline" size="sm" className="flex items-center gap-2 hover:bg-slate-100 text-xs">
+                    <ExternalLink size={14} />
                     Live Demo
                   </Button>
-                  <Button variant="outline" size="sm" className="flex items-center gap-2 hover:bg-slate-100">
-                    <Github size={16} />
+                  <Button variant="outline" size="sm" className="flex items-center gap-2 hover:bg-slate-100 text-xs">
+                    <Github size={14} />
                     Code
                   </Button>
                 </div>

@@ -1,5 +1,5 @@
 
-import { Mail, MapPin, Phone, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Phone, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -11,11 +11,12 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Let's Work Together
+            Let's Connect
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            I'm always interested in new opportunities and exciting projects. 
-            Let's discuss how we can bring your ideas to life.
+            I'm always interested in discussing data analytics opportunities, 
+            collaborating on interesting projects, or sharing insights about data engineering. 
+            Let's connect and explore how we can work together.
           </p>
         </div>
         
@@ -23,8 +24,8 @@ const Contact = () => {
           <div>
             <h3 className="text-2xl font-bold text-slate-900 mb-6">Get In Touch</h3>
             <p className="text-slate-600 mb-8">
-              Whether you have a project in mind, want to collaborate, or just want to say hello, 
-              I'd love to hear from you. Drop me a message and I'll get back to you as soon as possible.
+              Whether you have a data project in mind, want to discuss analytics solutions, 
+              or are looking for a passionate data analyst to join your team, I'd love to hear from you.
             </p>
             
             <div className="space-y-4 mb-8">
@@ -34,7 +35,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium text-slate-900">Email</p>
-                  <p className="text-slate-600">hello@alexdeveloper.com</p>
+                  <p className="text-slate-600">tejakaru13@gmail.com</p>
                 </div>
               </div>
               
@@ -44,7 +45,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium text-slate-900">Phone</p>
-                  <p className="text-slate-600">+1 (555) 123-4567</p>
+                  <p className="text-slate-600">312-774-5765</p>
                 </div>
               </div>
               
@@ -54,22 +55,19 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium text-slate-900">Location</p>
-                  <p className="text-slate-600">San Francisco, CA</p>
+                  <p className="text-slate-600">Chicago, Illinois 60616</p>
                 </div>
               </div>
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold text-slate-900 mb-4">Follow Me</h4>
+              <h4 className="text-lg font-semibold text-slate-900 mb-4">Connect Online</h4>
               <div className="flex space-x-4">
-                <a href="#" className="bg-white w-12 h-12 rounded-full flex items-center justify-center text-slate-600 hover:text-blue-600 hover:scale-110 transition-all duration-300 shadow-sm">
+                <a href="https://github.com/teja-karu" className="bg-white w-12 h-12 rounded-full flex items-center justify-center text-slate-600 hover:text-blue-600 hover:scale-110 transition-all duration-300 shadow-sm">
                   <Github size={20} />
                 </a>
-                <a href="#" className="bg-white w-12 h-12 rounded-full flex items-center justify-center text-slate-600 hover:text-blue-600 hover:scale-110 transition-all duration-300 shadow-sm">
+                <a href="https://linkedin.com/in/karu-teja" className="bg-white w-12 h-12 rounded-full flex items-center justify-center text-slate-600 hover:text-blue-600 hover:scale-110 transition-all duration-300 shadow-sm">
                   <Linkedin size={20} />
-                </a>
-                <a href="#" className="bg-white w-12 h-12 rounded-full flex items-center justify-center text-slate-600 hover:text-blue-600 hover:scale-110 transition-all duration-300 shadow-sm">
-                  <Twitter size={20} />
                 </a>
               </div>
             </div>
@@ -110,7 +108,7 @@ const Contact = () => {
                     Subject
                   </label>
                   <Input 
-                    placeholder="Let's work together!" 
+                    placeholder="Data Analytics Opportunity" 
                     className="border-slate-200 focus:border-blue-500" 
                   />
                 </div>
@@ -121,7 +119,7 @@ const Contact = () => {
                   </label>
                   <Textarea 
                     rows={6}
-                    placeholder="Tell me about your project..."
+                    placeholder="Tell me about your data project or opportunity..."
                     className="border-slate-200 focus:border-blue-500 resize-none"
                   />
                 </div>

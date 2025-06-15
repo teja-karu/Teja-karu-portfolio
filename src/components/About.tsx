@@ -1,27 +1,27 @@
 
-import { Code, Palette, Rocket, Users } from "lucide-react";
+import { Database, Cloud, BarChart3, Cog } from "lucide-react";
 
 const About = () => {
   const features = [
     {
-      icon: Code,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable code with best practices"
+      icon: Database,
+      title: "Data Engineering",
+      description: "Building scalable ETL pipelines with Python, PySpark, and SQL"
     },
     {
-      icon: Palette,
-      title: "Creative Design",
-      description: "Crafting beautiful interfaces with attention to detail"
+      icon: Cloud,
+      title: "Cloud Platforms",
+      description: "Expert in Azure Data Factory, Databricks, Snowflake, and AWS"
     },
     {
-      icon: Rocket,
-      title: "Performance",
-      description: "Building fast, optimized applications for great UX"
+      icon: BarChart3,
+      title: "Data Visualization",
+      description: "Creating insights with Power BI and Tableau dashboards"
     },
     {
-      icon: Users,
-      title: "Collaboration",
-      description: "Working effectively with teams and stakeholders"
+      icon: Cog,
+      title: "Big Data Tools",
+      description: "Proficient in Hadoop, Spark, Kafka, and modern data frameworks"
     }
   ];
 
@@ -33,8 +33,9 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            I'm a passionate developer with 5+ years of experience creating digital solutions 
-            that make a difference. I love turning complex problems into simple, beautiful designs.
+            Python SQL PySpark Data Analyst with 2+ years of experience developing scalable data pipelines. 
+            I specialize in cloud-based platforms and have solid skills in data visualization, 
+            passionate about turning data into actionable business intelligence.
           </p>
         </div>
         
@@ -58,32 +59,34 @@ const About = () => {
             <div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">My Journey</h3>
               <p className="text-slate-600 mb-4">
-                Started as a curious student who loved solving puzzles, I've evolved into a 
-                full-stack developer who enjoys building products that users love.
+                Currently pursuing my Masters in Computer/Information Technology Administration 
+                and Management at Lindsey Wilson College. My journey in data analytics has been 
+                driven by a passion for transforming complex data into meaningful insights.
               </p>
               <p className="text-slate-600">
-                When I'm not coding, you'll find me exploring new technologies, contributing 
-                to open source, or planning my next adventure.
+                At Team Tech Solutions, I've had the opportunity to work with large volumes of 
+                healthcare data, develop scalable ETL pipelines, and create impactful dashboards 
+                that drive business decisions.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h4 className="text-lg font-semibold text-slate-900 mb-4">Quick Stats</h4>
+              <h4 className="text-lg font-semibold text-slate-900 mb-4">Professional Stats</h4>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-slate-600">Projects Completed</span>
-                  <span className="font-semibold text-slate-900">50+</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-slate-600">Happy Clients</span>
-                  <span className="font-semibold text-slate-900">25+</span>
-                </div>
-                <div className="flex justify-between">
                   <span className="text-slate-600">Years Experience</span>
+                  <span className="font-semibold text-slate-900">2+</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-600">Data Platforms</span>
                   <span className="font-semibold text-slate-900">5+</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-600">Coffee Cups</span>
-                  <span className="font-semibold text-slate-900">∞</span>
+                  <span className="text-slate-600">Current Role</span>
+                  <span className="font-semibold text-slate-900">Data Analyst</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-600">Location</span>
+                  <span className="font-semibold text-slate-900">Chicago, IL</span>
                 </div>
               </div>
             </div>

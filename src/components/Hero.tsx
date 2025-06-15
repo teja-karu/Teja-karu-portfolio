@@ -8,14 +8,15 @@ const Hero = () => {
       <div className="max-w-4xl mx-auto text-center animate-fade-in">
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-4">
-            Hi, I'm <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Alex</span>
+            Hi, I'm <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Teja Karu</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-600 mb-6">
-            Full-Stack Developer & Creative Problem Solver
+            Python SQL PySpark Data Analyst
           </p>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto mb-8">
-            I craft beautiful, functional web experiences with modern technologies. 
-            Passionate about clean code, user experience, and bringing ideas to life.
+            Experienced data analyst with 2+ years in developing scalable data pipelines. 
+            Passionate about providing actionable intelligence to help grow businesses through 
+            cloud-based platforms and advanced analytics.
           </p>
         </div>
         
@@ -29,13 +30,13 @@ const Hero = () => {
         </div>
         
         <div className="flex justify-center space-x-6 mb-12">
-          <a href="#" className="text-slate-600 hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform">
+          <a href="https://github.com/teja-karu" className="text-slate-600 hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform">
             <Github size={24} />
           </a>
-          <a href="#" className="text-slate-600 hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform">
+          <a href="https://linkedin.com/in/karu-teja" className="text-slate-600 hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform">
             <Linkedin size={24} />
           </a>
-          <a href="#" className="text-slate-600 hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform">
+          <a href="mailto:tejakaru13@gmail.com" className="text-slate-600 hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform">
             <Mail size={24} />
           </a>
         </div>

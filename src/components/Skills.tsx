@@ -2,35 +2,40 @@
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Programming & Data",
       skills: [
-        { name: "React", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Vue.js", level: 85 },
-        { name: "Tailwind CSS", level: 92 },
-        { name: "Next.js", level: 88 }
+        { name: "Python", level: 95 },
+        { name: "SQL", level: 90 },
+        { name: "PySpark", level: 85 },
+        { name: "R", level: 75 },
+        { name: "Bash", level: 80 }
       ]
     },
     {
-      title: "Backend",
+      title: "Big Data & Cloud",
       skills: [
-        { name: "Node.js", level: 90 },
-        { name: "Python", level: 85 },
-        { name: "PostgreSQL", level: 80 },
-        { name: "MongoDB", level: 82 },
-        { name: "GraphQL", level: 75 }
+        { name: "Apache Spark", level: 90 },
+        { name: "Hadoop", level: 85 },
+        { name: "Azure Data Factory", level: 88 },
+        { name: "Databricks", level: 85 },
+        { name: "Snowflake", level: 82 }
       ]
     },
     {
-      title: "Tools & Others",
+      title: "Databases & Tools",
       skills: [
-        { name: "Git", level: 95 },
-        { name: "Docker", level: 80 },
-        { name: "AWS", level: 75 },
-        { name: "Figma", level: 85 },
-        { name: "Jest", level: 88 }
+        { name: "PostgreSQL", level: 90 },
+        { name: "MongoDB", level: 80 },
+        { name: "Power BI", level: 92 },
+        { name: "Tableau", level: 88 },
+        { name: "Kafka", level: 75 }
       ]
     }
+  ];
+
+  const technologies = [
+    "NumPy", "Pandas", "Matplotlib", "Seaborn", "Scikit-learn", "TensorFlow",
+    "HDFS", "Hive", "Airflow", "AWS S3", "Azure Data Lake", "Git", "Excel"
   ];
 
   return (
@@ -41,12 +46,12 @@ const Skills = () => {
             Skills & Expertise
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            I'm constantly learning and improving my skills. Here's what I'm currently 
-            working with and what I'm passionate about.
+            Proficient in modern data analytics tools and cloud platforms. 
+            Here are the technologies I work with to deliver scalable data solutions.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {skillCategories.map((category, index) => (
             <div key={index} className="bg-slate-50 rounded-xl p-6 hover:bg-slate-100 transition-all duration-300">
               <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">{category.title}</h3>
@@ -70,23 +75,23 @@ const Skills = () => {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">Always Learning</h3>
-            <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-              Technology evolves rapidly, and I'm committed to staying current with the latest 
-              trends, frameworks, and best practices in web development.
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
+          <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">Additional Technologies</h3>
+          <div className="flex flex-wrap justify-center gap-3 mb-6">
+            {technologies.map((tech, index) => (
+              <span 
+                key={index}
+                className="px-4 py-2 bg-white text-slate-700 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-shadow"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+          <div className="text-center">
+            <p className="text-slate-600 max-w-2xl mx-auto">
+              Continuously expanding my expertise in emerging data technologies and cloud platforms 
+              to stay current with industry best practices and deliver innovative solutions.
             </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {["AI/ML", "Web3", "Rust", "Go", "Kubernetes"].map((tech, index) => (
-                <span 
-                  key={index}
-                  className="px-4 py-2 bg-white text-slate-700 rounded-full text-sm font-medium shadow-sm"
-                >
-                  Currently exploring {tech}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
       </div>
