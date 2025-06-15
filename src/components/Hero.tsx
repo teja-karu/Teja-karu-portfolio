@@ -1,4 +1,3 @@
-
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -58,9 +57,9 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 animate-fade-in relative z-10">
+      <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-12 animate-fade-in relative z-10">
         {/* Content Section */}
-        <div className="flex-1 text-center lg:text-left">
+        <div className="text-center">
           <div className="mb-8">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
               Hi, I'm <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Teja Karu</span>
@@ -68,14 +67,14 @@ const Hero = () => {
             <p className="text-xl md:text-2xl text-gray-300 mb-6">
               Python SQL PySpark Data Analyst
             </p>
-            <p className="text-lg text-gray-400 max-w-2xl mb-8">
+            <p className="text-lg text-gray-400 max-w-2xl mb-8 mx-auto">
               Experienced data analyst with 2+ years in developing scalable data pipelines. 
               Passionate about providing actionable intelligence to help grow businesses through 
               cloud-based platforms and advanced analytics.
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button 
               size="lg" 
               onClick={() => scrollToSection('projects')}
@@ -93,7 +92,7 @@ const Hero = () => {
             </Button>
           </div>
           
-          <div className="flex justify-center lg:justify-start space-x-6 mb-12">
+          <div className="flex justify-center space-x-6 mb-12">
             <a href="https://github.com/teja-karu" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:scale-110 transform">
               <Github size={24} />
             </a>
@@ -106,7 +105,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Profile Image Section */}
+        {/* Profile Image Section - Now below content */}
         <div className="flex-shrink-0">
           <div className="relative">
             <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 to-purple-400 p-1 bg-gradient-to-r from-blue-400 to-purple-400">
