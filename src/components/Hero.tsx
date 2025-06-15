@@ -1,4 +1,3 @@
-
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -21,8 +20,44 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 px-4 pt-16">
-      <div className="max-w-4xl mx-auto text-center animate-fade-in">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 px-4 pt-16 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Floating Circles */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/4 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        
+        {/* Geometric Shapes */}
+        <div className="absolute top-32 right-1/4 w-6 h-6 border border-blue-400/30 rotate-45 animate-spin" style={{ animationDuration: '20s' }}></div>
+        <div className="absolute bottom-1/3 left-16 w-8 h-8 border border-purple-400/30 rotate-45 animate-spin" style={{ animationDuration: '25s' }}></div>
+        <div className="absolute top-1/2 right-12 w-4 h-4 bg-blue-400/20 rotate-45 animate-bounce"></div>
+        
+        {/* Dots Pattern */}
+        <div className="absolute top-1/4 left-1/3">
+          <div className="grid grid-cols-6 gap-4 opacity-20">
+            {Array.from({ length: 24 }).map((_, i) => (
+              <div key={i} className="w-1 h-1 bg-gray-400 rounded-full animate-pulse" style={{ animationDelay: `${i * 200}ms` }}></div>
+            ))}
+          </div>
+        </div>
+        
+        {/* Lines */}
+        <div className="absolute top-0 left-1/2 w-px h-32 bg-gradient-to-b from-transparent via-blue-400/30 to-transparent transform -translate-x-1/2"></div>
+        <div className="absolute bottom-0 right-1/3 w-px h-24 bg-gradient-to-t from-transparent via-purple-400/30 to-transparent"></div>
+        
+        {/* Code-like elements */}
+        <div className="absolute top-1/4 left-8 text-blue-400/20 font-mono text-sm">
+          <div className="animate-pulse">{'<data>'}</div>
+          <div className="animate-pulse delay-500">{'</analysis>'}</div>
+        </div>
+        <div className="absolute bottom-1/4 right-8 text-purple-400/20 font-mono text-sm">
+          <div className="animate-pulse delay-1000">{'SELECT *'}</div>
+          <div className="animate-pulse delay-1500">{'FROM insights'}</div>
+        </div>
+      </div>
+      
+      <div className="max-w-4xl mx-auto text-center animate-fade-in relative z-10">
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
             Hi, I'm <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Teja Karu</span>
