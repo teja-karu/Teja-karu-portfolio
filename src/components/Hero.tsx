@@ -1,0 +1,51 @@
+
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const Hero = () => {
+  return (
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 px-4">
+      <div className="max-w-4xl mx-auto text-center animate-fade-in">
+        <div className="mb-8">
+          <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-4">
+            Hi, I'm <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Alex</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-slate-600 mb-6">
+            Full-Stack Developer & Creative Problem Solver
+          </p>
+          <p className="text-lg text-slate-500 max-w-2xl mx-auto mb-8">
+            I craft beautiful, functional web experiences with modern technologies. 
+            Passionate about clean code, user experience, and bringing ideas to life.
+          </p>
+        </div>
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105">
+            View My Work
+          </Button>
+          <Button variant="outline" size="lg" className="px-8 py-3 rounded-full hover:bg-slate-50 transition-all duration-300">
+            Download Resume
+          </Button>
+        </div>
+        
+        <div className="flex justify-center space-x-6 mb-12">
+          <a href="#" className="text-slate-600 hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform">
+            <Github size={24} />
+          </a>
+          <a href="#" className="text-slate-600 hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform">
+            <Linkedin size={24} />
+          </a>
+          <a href="#" className="text-slate-600 hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform">
+            <Mail size={24} />
+          </a>
+        </div>
+        
+        <div className="animate-bounce">
+          <ArrowDown className="mx-auto text-slate-400" size={32} />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
