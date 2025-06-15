@@ -4,16 +4,16 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 px-4">
+    <section className="min-h-screen flex items-center justify-center bg-black px-4">
       <div className="max-w-4xl mx-auto text-center animate-fade-in">
         <div className="mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-4">
-            Hi, I'm <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Teja Karu</span>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
+            Hi, I'm <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Teja Karu</span>
           </h1>
-          <p className="text-xl md:text-2xl text-slate-600 mb-6">
+          <p className="text-xl md:text-2xl text-gray-300 mb-6">
             Python SQL PySpark Data Analyst
           </p>
-          <p className="text-lg text-slate-500 max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
             Experienced data analyst with 2+ years in developing scalable data pipelines. 
             Passionate about providing actionable intelligence to help grow businesses through 
             cloud-based platforms and advanced analytics.
@@ -24,25 +24,25 @@ const Hero = () => {
           <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105">
             View My Work
           </Button>
-          <Button variant="outline" size="lg" className="px-8 py-3 rounded-full hover:bg-slate-50 transition-all duration-300">
+          <Button variant="outline" size="lg" className="px-8 py-3 rounded-full border-gray-600 text-gray-300 hover:bg-gray-800 transition-all duration-300">
             Download Resume
           </Button>
         </div>
         
         <div className="flex justify-center space-x-6 mb-12">
-          <a href="https://github.com/teja-karu" className="text-slate-600 hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform">
+          <a href="https://github.com/teja-karu" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:scale-110 transform">
             <Github size={24} />
           </a>
-          <a href="https://linkedin.com/in/karu-teja" className="text-slate-600 hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform">
+          <a href="https://linkedin.com/in/karu-teja" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:scale-110 transform">
             <Linkedin size={24} />
           </a>
-          <a href="mailto:tejakaru13@gmail.com" className="text-slate-600 hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform">
+          <a href="mailto:tejakaru13@gmail.com" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:scale-110 transform">
             <Mail size={24} />
           </a>
         </div>
         
         <div className="animate-bounce">
-          <ArrowDown className="mx-auto text-slate-400" size={32} />
+          <ArrowDown className="mx-auto text-gray-500" size={32} />
         </div>
       </div>
     </section>

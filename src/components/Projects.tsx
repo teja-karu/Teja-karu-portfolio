@@ -44,13 +44,13 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-slate-50">
+    <section className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Featured Projects
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Here are some key data engineering and analytics projects that showcase my experience 
             in building scalable data pipelines and delivering actionable business insights.
           </p>
@@ -58,7 +58,7 @@ const Projects = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-0 shadow-lg">
+            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-gray-700 bg-gray-900 shadow-lg">
               <div className="relative overflow-hidden rounded-t-lg">
                 <img 
                   src={project.image} 
@@ -71,14 +71,14 @@ const Projects = () => {
                 </div>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{project.title}</h3>
-                <p className="text-slate-600 mb-4 text-sm leading-relaxed">{project.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, tagIndex) => (
                     <span 
                       key={tagIndex}
-                      className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-xs rounded-full"
+                      className="px-3 py-1 bg-gradient-to-r from-blue-600/20 to-purple-600/20 text-blue-300 text-xs rounded-full border border-blue-500/30"
                     >
                       {tag}
                     </span>
@@ -86,11 +86,11 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <Button variant="outline" size="sm" className="flex items-center gap-2 hover:bg-slate-100 text-xs">
+                  <Button variant="outline" size="sm" className="flex items-center gap-2 border-gray-600 text-gray-300 hover:bg-gray-800 text-xs">
                     <ExternalLink size={14} />
                     Live Demo
                   </Button>
-                  <Button variant="outline" size="sm" className="flex items-center gap-2 hover:bg-slate-100 text-xs">
+                  <Button variant="outline" size="sm" className="flex items-center gap-2 border-gray-600 text-gray-300 hover:bg-gray-800 text-xs">
                     <Github size={14} />
                     Code
                   </Button>
@@ -101,7 +101,7 @@ const Projects = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="px-8 py-3 rounded-full hover:bg-slate-100 transition-all duration-300">
+          <Button variant="outline" size="lg" className="px-8 py-3 rounded-full border-gray-600 text-gray-300 hover:bg-gray-800 transition-all duration-300">
             View All Projects
           </Button>
         </div>

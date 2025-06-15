@@ -26,13 +26,13 @@ const About = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             About Me
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Python SQL PySpark Data Analyst with 2+ years of experience developing scalable data pipelines. 
             I specialize in cloud-based platforms and have solid skills in data visualization, 
             passionate about turning data into actionable business intelligence.
@@ -43,50 +43,50 @@ const About = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="text-center p-6 bg-slate-50 rounded-xl hover:bg-slate-100 transition-all duration-300 hover:scale-105 group"
+              className="text-center p-6 bg-gray-900 rounded-xl hover:bg-gray-800 transition-all duration-300 hover:scale-105 group"
             >
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <feature.icon className="text-white" size={24} />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">{feature.title}</h3>
-              <p className="text-slate-600">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+              <p className="text-gray-400">{feature.description}</p>
             </div>
           ))}
         </div>
         
-        <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
+        <div className="bg-gray-900 rounded-2xl p-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">My Journey</h3>
-              <p className="text-slate-600 mb-4">
+              <h3 className="text-2xl font-bold text-white mb-4">My Journey</h3>
+              <p className="text-gray-300 mb-4">
                 Currently pursuing my Masters in Computer/Information Technology Administration 
                 and Management at Lindsey Wilson College. My journey in data analytics has been 
                 driven by a passion for transforming complex data into meaningful insights.
               </p>
-              <p className="text-slate-600">
+              <p className="text-gray-300">
                 At Team Tech Solutions, I've had the opportunity to work with large volumes of 
                 healthcare data, develop scalable ETL pipelines, and create impactful dashboards 
                 that drive business decisions.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h4 className="text-lg font-semibold text-slate-900 mb-4">Professional Stats</h4>
+            <div className="bg-gray-800 p-6 rounded-xl shadow-sm">
+              <h4 className="text-lg font-semibold text-white mb-4">Professional Stats</h4>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-slate-600">Years Experience</span>
-                  <span className="font-semibold text-slate-900">2+</span>
+                  <span className="text-gray-300">Years Experience</span>
+                  <span className="font-semibold text-white">2+</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-600">Data Platforms</span>
-                  <span className="font-semibold text-slate-900">5+</span>
+                  <span className="text-gray-300">Data Platforms</span>
+                  <span className="font-semibold text-white">5+</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-600">Current Role</span>
-                  <span className="font-semibold text-slate-900">Data Analyst</span>
+                  <span className="text-gray-300">Current Role</span>
+                  <span className="font-semibold text-white">Data Analyst</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-600">Location</span>
-                  <span className="font-semibold text-slate-900">Chicago, IL</span>
+                  <span className="text-gray-300">Location</span>
+                  <span className="font-semibold text-white">Chicago, IL</span>
                 </div>
               </div>
             </div>
