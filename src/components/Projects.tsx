@@ -44,7 +44,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-black">
+    <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -58,7 +58,7 @@ const Projects = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-gray-700 bg-gray-900 shadow-lg">
+            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-slate-700 bg-slate-800/50 backdrop-blur-sm shadow-lg">
               <div className="relative overflow-hidden rounded-t-lg">
                 <img 
                   src={project.image} 
@@ -86,11 +86,11 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <Button variant="outline" size="sm" className="flex items-center gap-2 border-gray-600 text-gray-300 hover:bg-gray-800 text-xs">
+                  <Button variant="outline" size="sm" className="flex items-center gap-2 border-gray-500 text-gray-300 hover:bg-white/10 text-xs">
                     <ExternalLink size={14} />
                     Live Demo
                   </Button>
-                  <Button variant="outline" size="sm" className="flex items-center gap-2 border-gray-600 text-gray-300 hover:bg-gray-800 text-xs">
+                  <Button variant="outline" size="sm" className="flex items-center gap-2 border-gray-500 text-gray-300 hover:bg-white/10 text-xs">
                     <Github size={14} />
                     Code
                   </Button>
@@ -101,7 +101,7 @@ const Projects = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="px-8 py-3 rounded-full border-gray-600 text-gray-300 hover:bg-gray-800 transition-all duration-300">
+          <Button variant="outline" size="lg" className="px-8 py-3 rounded-full border-gray-400 text-gray-300 hover:bg-white/10 transition-all duration-300">
             View All Projects
           </Button>
         </div>

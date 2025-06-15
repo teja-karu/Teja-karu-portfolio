@@ -1,3 +1,4 @@
+
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -12,8 +13,15 @@ const Hero = () => {
     document.body.removeChild(link);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="min-h-screen flex items-center justify-center bg-black px-4 pt-16">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 px-4 pt-16">
       <div className="max-w-4xl mx-auto text-center animate-fade-in">
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
@@ -30,14 +38,18 @@ const Hero = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105">
+          <Button 
+            size="lg" 
+            onClick={() => scrollToSection('projects')}
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
+          >
             View My Work
           </Button>
           <Button 
             variant="outline" 
             size="lg" 
             onClick={handleResumeDownload}
-            className="px-8 py-3 rounded-full border-gray-600 text-gray-300 hover:bg-gray-800 transition-all duration-300"
+            className="px-8 py-3 rounded-full border-gray-400 text-gray-300 hover:bg-white/10 transition-all duration-300"
           >
             Download Resume
           </Button>
@@ -56,7 +68,7 @@ const Hero = () => {
         </div>
         
         <div className="animate-bounce">
-          <ArrowDown className="mx-auto text-gray-500" size={32} />
+          <ArrowDown className="mx-auto text-gray-400" size={32} />
         </div>
       </div>
     </section>
