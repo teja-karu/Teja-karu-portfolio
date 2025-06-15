@@ -24,11 +24,11 @@ const Projects = () => {
       githubUrl: "#"
     },
     {
-      title: "Healthcare Analytics Dashboard",
-      description: "Created comprehensive analytics platform processing large volumes of healthcare data with Azure Data Factory. Built interactive Power BI dashboards for quality metrics and performance analytics while ensuring HIPAA compliance throughout the data pipeline.",
+      title: "Healthcare Data Analytics Platform",
+      description: "Ingested and processed large volumes of healthcare data using Azure Data Factory. Developed scalable ETL pipelines in Databricks with PySpark, ensuring HIPAA compliance. Created advanced Power BI dashboards for quality metrics and performance analytics.",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80",
       tags: ["Azure Data Factory", "Databricks", "PySpark", "Power BI", "Healthcare"],
-      date: "2023-2024",
+      date: "2020-2023",
       liveUrl: "#",
       githubUrl: "#"
     },
@@ -38,24 +38,6 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
       tags: ["Snowflake", "SQL", "Data Migration", "Performance Optimization"],
       date: "2022-2023",
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Real-time Data Streaming Platform",
-      description: "Designed and implemented a real-time data processing system using Apache Kafka and Spark Streaming. Processed millions of events per day with sub-second latency, enabling real-time analytics and monitoring dashboards.",
-      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=800&q=80",
-      tags: ["Apache Kafka", "Spark Streaming", "Real-time Analytics", "Python"],
-      date: "2023",
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Machine Learning Data Pipeline",
-      description: "Built automated ML pipeline for predictive analytics on customer behavior data. Integrated feature engineering, model training, and deployment workflows using MLflow and Azure ML, improving prediction accuracy by 25%.",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80",
-      tags: ["Machine Learning", "MLflow", "Azure ML", "Python", "Feature Engineering"],
-      date: "2024",
       liveUrl: "#",
       githubUrl: "#"
     }
@@ -69,12 +51,12 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            A showcase of data engineering and analytics projects demonstrating my expertise 
-            in building scalable pipelines, processing big data, and delivering actionable insights.
+            Here are some key data engineering and analytics projects that showcase my experience 
+            in building scalable data pipelines and delivering actionable business insights.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-slate-700 bg-slate-800/50 backdrop-blur-sm shadow-lg">
               <div className="relative overflow-hidden rounded-t-lg">
