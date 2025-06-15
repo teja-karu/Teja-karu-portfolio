@@ -3,6 +3,16 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const handleResumeDownload = () => {
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // You'll need to add your resume.pdf file to the public folder
+    link.download = 'Teja_Karu_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-black px-4">
       <div className="max-w-4xl mx-auto text-center animate-fade-in">
@@ -24,7 +34,12 @@ const Hero = () => {
           <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105">
             View My Work
           </Button>
-          <Button variant="outline" size="lg" className="px-8 py-3 rounded-full border-gray-600 text-gray-300 hover:bg-gray-800 transition-all duration-300">
+          <Button 
+            variant="outline" 
+            size="lg" 
+            onClick={handleResumeDownload}
+            className="px-8 py-3 rounded-full border-gray-600 text-gray-300 hover:bg-gray-800 transition-all duration-300"
+          >
             Download Resume
           </Button>
         </div>
