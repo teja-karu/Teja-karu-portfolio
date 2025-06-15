@@ -1,4 +1,3 @@
-
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -24,14 +23,14 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 px-4 pt-16 relative overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
         style={{
           backgroundImage: `url('/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png')`
         }}
       ></div>
       
-      {/* Overlay to maintain readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-blue-900/80 to-slate-800/80"></div>
+      {/* Light overlay to maintain text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/30 via-blue-900/30 to-slate-800/30"></div>
 
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
