@@ -1,3 +1,4 @@
+
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -73,6 +74,25 @@ const Hero = () => {
               cloud-based platforms and advanced analytics.
             </p>
           </div>
+
+          {/* Profile Image Section - Now between content and buttons */}
+          <div className="flex-shrink-0 mb-8">
+            <div className="relative">
+              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 to-purple-400 p-1 bg-gradient-to-r from-blue-400 to-purple-400">
+                <div className="w-full h-full rounded-full overflow-hidden bg-white">
+                  <img
+                    src="/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png"
+                    alt="Teja Karu"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              {/* Decorative elements around the image */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-400/20 rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-400/20 rounded-full animate-pulse delay-1000"></div>
+              <div className="absolute top-1/2 -left-8 w-4 h-4 border border-blue-400/30 rotate-45 animate-spin" style={{ animationDuration: '15s' }}></div>
+            </div>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button 
@@ -102,25 +122,6 @@ const Hero = () => {
             <a href="mailto:tejakaru13@gmail.com" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:scale-110 transform">
               <Mail size={24} />
             </a>
-          </div>
-        </div>
-
-        {/* Profile Image Section - Now below content */}
-        <div className="flex-shrink-0">
-          <div className="relative">
-            <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 to-purple-400 p-1 bg-gradient-to-r from-blue-400 to-purple-400">
-              <div className="w-full h-full rounded-full overflow-hidden bg-white">
-                <img
-                  src="/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png"
-                  alt="Teja Karu"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-            {/* Decorative elements around the image */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-400/20 rounded-full animate-pulse"></div>
-            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-400/20 rounded-full animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 -left-8 w-4 h-4 border border-blue-400/30 rotate-45 animate-spin" style={{ animationDuration: '15s' }}></div>
           </div>
         </div>
       </div>
