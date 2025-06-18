@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 // Get the base path from vite config for GitHub Pages
-const basename = import.meta.env.PROD ? '/own-path-display' : '/';
+const basename = import.meta.env.PROD ? '/Teja-karu-portfolio' : '/';
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
