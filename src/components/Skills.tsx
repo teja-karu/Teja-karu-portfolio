@@ -1,162 +1,233 @@
 
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+import { BarChart, Bar, XAxis, YAxis, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, PieChart, Pie, Cell } from "recharts";
+import { Database, Cloud, BarChart3, Cpu, Zap, GitBranch } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 const Skills = () => {
+  // Enhanced skill categories with more data engineering focus
   const skillCategories = [
     {
-      title: "Programming & Data",
+      title: "Data Engineering & ETL",
+      icon: GitBranch,
       skills: [
-        { name: "Python", level: 95 },
-        { name: "SQL", level: 90 },
-        { name: "PySpark", level: 85 },
-        { name: "R", level: 75 },
-        { name: "Bash", level: 80 }
-      ]
+        { name: "Apache Spark", level: 95, experience: "3+ years" },
+        { name: "Apache Airflow", level: 90, experience: "2+ years" },
+        { name: "Kafka", level: 85, experience: "2 years" },
+        { name: "ETL/ELT Pipelines", level: 95, experience: "3+ years" },
+        { name: "Data Modeling", level: 92, experience: "2+ years" }
+      ],
+      color: "from-blue-500 to-indigo-600"
     },
     {
-      title: "Big Data & Cloud",
+      title: "Cloud & Big Data",
+      icon: Cloud,
       skills: [
-        { name: "Apache Spark", level: 90 },
-        { name: "Hadoop", level: 85 },
-        { name: "Azure Data Factory", level: 88 },
-        { name: "Databricks", level: 85 },
-        { name: "Snowflake", level: 82 }
-      ]
+        { name: "Azure Data Factory", level: 92, experience: "2+ years" },
+        { name: "Databricks", level: 88, experience: "2 years" },
+        { name: "Snowflake", level: 90, experience: "1+ years" },
+        { name: "AWS S3", level: 85, experience: "2 years" },
+        { name: "Azure Data Lake", level: 88, experience: "2+ years" }
+      ],
+      color: "from-purple-500 to-pink-600"
     },
     {
-      title: "Databases & Tools",
+      title: "Programming & Analytics",
+      icon: Cpu,
       skills: [
-        { name: "PostgreSQL", level: 90 },
-        { name: "MongoDB", level: 80 },
-        { name: "Power BI", level: 92 },
-        { name: "Tableau", level: 88 },
-        { name: "Kafka", level: 75 }
-      ]
+        { name: "Python", level: 96, experience: "3+ years" },
+        { name: "PySpark", level: 94, experience: "2+ years" },
+        { name: "SQL", level: 95, experience: "3+ years" },
+        { name: "R", level: 80, experience: "1+ years" },
+        { name: "Scala", level: 75, experience: "1 year" }
+      ],
+      color: "from-green-500 to-teal-600"
+    },
+    {
+      title: "Visualization & BI",
+      icon: BarChart3,
+      skills: [
+        { name: "Power BI", level: 94, experience: "2+ years" },
+        { name: "Tableau", level: 88, experience: "1+ years" },
+        { name: "Looker", level: 82, experience: "1 year" },
+        { name: "D3.js", level: 78, experience: "1 year" },
+        { name: "Matplotlib/Seaborn", level: 90, experience: "2+ years" }
+      ],
+      color: "from-orange-500 to-red-600"
     }
   ];
 
+  // Data for radar chart showing expertise areas
+  const expertiseRadarData = [
+    { area: "Data Pipelines", score: 95 },
+    { area: "Cloud Architecture", score: 88 },
+    { area: "Data Modeling", score: 92 },
+    { area: "Big Data Processing", score: 90 },
+    { area: "Analytics & BI", score: 89 },
+    { area: "Data Quality", score: 93 }
+  ];
+
+  // Technology proficiency distribution
+  const techProficiencyData = [
+    { category: "Expert (90-100%)", count: 8, color: "#10B981" },
+    { category: "Advanced (80-89%)", count: 7, color: "#3B82F6" },
+    { category: "Intermediate (70-79%)", count: 5, color: "#F59E0B" },
+    { category: "Learning (60-69%)", count: 3, color: "#EF4444" }
+  ];
+
+  const chartConfig = {
+    level: { label: "Proficiency Level", color: "#8B5CF6" },
+    score: { label: "Expertise Score", color: "#3B82F6" },
+    count: { label: "Number of Technologies", color: "#10B981" }
+  };
+
   const technologies = [
-    "NumPy", "Pandas", "Matplotlib", "Seaborn", "Scikit-learn", "TensorFlow",
-    "HDFS", "Hive", "Airflow", "AWS S3", "Azure Data Lake", "Git", "Excel"
+    "NumPy", "Pandas", "Dask", "Polars", "FastAPI", "Docker", "Kubernetes", 
+    "Terraform", "Jenkins", "Git", "HDFS", "Hive", "Presto", "ClickHouse",
+    "Redis", "Elasticsearch", "Grafana", "Prometheus", "Apache Beam"
   ];
 
   return (
-    <section className="py-20 px-4 bg-slate-50" style={{ perspective: '1000px' }}>
-      <div className="max-w-6xl mx-auto">
+    <section className="py-20 px-4 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Skills & Expertise
+            Technical Expertise & Skills
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Proficient in modern data analytics tools and cloud platforms. 
-            Here are the technologies I work with to deliver scalable data solutions.
+          <p className="text-xl text-slate-600 max-w-4xl mx-auto">
+            Comprehensive skill set spanning the entire data engineering lifecycle, 
+            from ingestion and processing to analytics and visualization.
           </p>
         </div>
+
+        {/* Skills Overview Charts */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {/* Expertise Radar Chart */}
+          <Card className="shadow-xl hover:shadow-2xl transition-all duration-300">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Zap className="text-blue-600" size={24} />
+                Data Engineering Expertise
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ChartContainer config={chartConfig} className="h-80">
+                <RadarChart data={expertiseRadarData}>
+                  <PolarGrid />
+                  <PolarAngleAxis dataKey="area" />
+                  <PolarRadiusAxis angle={90} domain={[0, 100]} />
+                  <Radar
+                    name="Expertise Score"
+                    dataKey="score"
+                    stroke="#3B82F6"
+                    fill="#3B82F6"
+                    fillOpacity={0.3}
+                    strokeWidth={3}
+                  />
+                  <ChartTooltip content={<ChartTooltipContent />} />
+                </RadarChart>
+              </ChartContainer>
+            </CardContent>
+          </Card>
+
+          {/* Technology Proficiency Distribution */}
+          <Card className="shadow-xl hover:shadow-2xl transition-all duration-300">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Database className="text-green-600" size={24} />
+                Technology Proficiency Distribution
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ChartContainer config={chartConfig} className="h-80">
+                <PieChart>
+                  <Pie
+                    data={techProficiencyData}
+                    cx="50%"
+                    cy="50%"
+                    outerRadius={100}
+                    dataKey="count"
+                    label={({ category, count }) => `${category}: ${count}`}
+                  >
+                    {techProficiencyData.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={entry.color} />
+                    ))}
+                  </Pie>
+                  <ChartTooltip content={<ChartTooltipContent />} />
+                </PieChart>
+              </ChartContainer>
+            </CardContent>
+          </Card>
+        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        {/* Detailed Skills Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {skillCategories.map((category, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-xl p-6 border border-slate-200 cursor-pointer transition-all duration-500 transform-gpu hover:scale-110 hover:rotate-x-12 hover:rotate-y-6 hover:shadow-2xl hover:shadow-blue-500/20 hover:z-10 relative group"
-              style={{
-                transformStyle: 'preserve-3d',
-                transformOrigin: 'center center'
-              }}
-              onMouseEnter={(e) => {
-                const rect = e.currentTarget.getBoundingClientRect();
-                const centerX = rect.left + rect.width / 2;
-                const centerY = rect.top + rect.height / 2;
-                const mouseX = e.clientX - centerX;
-                const mouseY = e.clientY - centerY;
-                
-                const rotateX = (mouseY / rect.height) * -20;
-                const rotateY = (mouseX / rect.width) * 20;
-                
-                e.currentTarget.style.transform = `scale(1.1) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(50px)`;
-              }}
-              onMouseMove={(e) => {
-                const rect = e.currentTarget.getBoundingClientRect();
-                const centerX = rect.left + rect.width / 2;
-                const centerY = rect.top + rect.height / 2;
-                const mouseX = e.clientX - centerX;
-                const mouseY = e.clientY - centerY;
-                
-                const rotateX = (mouseY / rect.height) * -20;
-                const rotateY = (mouseX / rect.width) * 20;
-                
-                e.currentTarget.style.transform = `scale(1.1) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(50px)`;
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'scale(1) rotateX(0deg) rotateY(0deg) translateZ(0px)';
-              }}
-            >
-              {/* 3D Card Inner Content */}
-              <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center group-hover:text-blue-600 transition-colors duration-300">
+            <Card key={index} className="group hover:scale-105 transition-all duration-500 shadow-lg hover:shadow-2xl">
+              <CardHeader className={`bg-gradient-to-r ${category.color} text-white rounded-t-lg`}>
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <category.icon size={20} />
                   {category.title}
-                </h3>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-6">
                 <div className="space-y-4">
                   {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="group-hover:transform group-hover:translateZ-10">
-                      <div className="flex justify-between mb-2">
-                        <span className="text-slate-700 font-medium group-hover:text-slate-900 transition-colors">
+                    <div key={skillIndex} className="group/skill">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-slate-700 font-medium text-sm">
                           {skill.name}
                         </span>
-                        <span className="text-slate-500 text-sm group-hover:text-blue-600 transition-colors">
-                          {skill.level}%
-                        </span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-slate-500 text-xs">
+                            {skill.experience}
+                          </span>
+                          <span className="text-blue-600 text-sm font-bold">
+                            {skill.level}%
+                          </span>
+                        </div>
                       </div>
-                      <div className="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
+                      <div className="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
                         <div 
-                          className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full transition-all duration-1000 ease-out group-hover:from-blue-500 group-hover:to-purple-500 group-hover:shadow-lg"
+                          className={`bg-gradient-to-r ${category.color} h-2.5 rounded-full transition-all duration-1000 ease-out group-hover/skill:shadow-lg`}
                           style={{ width: `${skill.level}%` }}
                         />
                       </div>
                     </div>
                   ))}
                 </div>
-              </div>
-              
-              {/* 3D Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 to-purple-400/0 group-hover:from-blue-400/10 group-hover:to-purple-400/10 rounded-xl transition-all duration-500 pointer-events-none" />
-              
-              {/* 3D Border Effect */}
-              <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-400/30 rounded-xl transition-all duration-500 pointer-events-none" />
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
         
-        <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:shadow-xl hover:scale-105 transform-gpu cursor-pointer"
-             style={{ transformStyle: 'preserve-3d' }}
-             onMouseEnter={(e) => {
-               e.currentTarget.style.transform = 'scale(1.05) rotateX(5deg) translateZ(20px)';
-             }}
-             onMouseLeave={(e) => {
-               e.currentTarget.style.transform = 'scale(1) rotateX(0deg) translateZ(0px)';
-             }}>
-          <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">Additional Technologies</h3>
-          <div className="flex flex-wrap justify-center gap-3 mb-6">
-            {technologies.map((tech, index) => (
-              <span 
-                key={index}
-                className="px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200 transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white hover:scale-110 hover:shadow-lg transform-gpu cursor-pointer"
-                style={{ transformStyle: 'preserve-3d' }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'scale(1.1) translateZ(10px)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'scale(1) translateZ(0px)';
-                }}
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-          <div className="text-center">
-            <p className="text-slate-600 max-w-2xl mx-auto">
-              Continuously expanding my expertise in emerging data technologies and cloud platforms 
-              to stay current with industry best practices and deliver innovative solutions.
-            </p>
-          </div>
-        </div>
+        {/* Additional Technologies Section */}
+        <Card className="shadow-xl hover:shadow-2xl transition-all duration-500">
+          <CardHeader className="bg-gradient-to-r from-slate-700 to-slate-800 text-white rounded-t-lg">
+            <CardTitle className="text-center text-xl">
+              Additional Technologies & Tools
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="p-8">
+            <div className="flex flex-wrap justify-center gap-3 mb-6">
+              {technologies.map((tech, index) => (
+                <span 
+                  key={index}
+                  className="px-4 py-2 bg-gradient-to-r from-slate-100 to-slate-200 text-slate-700 rounded-full text-sm font-medium border border-slate-300 transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white hover:scale-110 hover:shadow-lg transform cursor-pointer"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <div className="text-center">
+              <p className="text-slate-600 max-w-3xl mx-auto">
+                Continuously expanding expertise across the data engineering ecosystem, 
+                staying current with emerging technologies and industry best practices 
+                to deliver innovative, scalable solutions.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
