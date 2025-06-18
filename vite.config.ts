@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/own-path-display/' : '/',
+  base: mode === 'production' ? '/Teja-karu-portfolio/' : '/',
   server: {
     host: "::",
     port: 8080,
