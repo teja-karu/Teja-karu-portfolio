@@ -6,7 +6,7 @@ const Hero = () => {
   const handleResumeDownload = () => {
     // Create a link element and trigger download
     const link = document.createElement('a');
-    link.href = '/Teja-karu-portfolio/resume.pdf'; // Updated path for GitHub Pages
+    link.href = '/Teja-karu-portfolio/resume.pdf';
     link.download = 'Teja_Karu_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -79,13 +79,25 @@ const Hero = () => {
       <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-8 animate-fade-in relative z-10">
         {/* Content Section */}
         <div className="text-center">
+          {/* Content above picture */}
+          <div className="mb-8">
+            <p className="text-xl md:text-2xl text-slate-600 mb-4 font-medium">
+              4+ Years Experience | Azure & AWS | Healthcare & Enterprise Data Solutions
+            </p>
+            <p className="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
+              Detail-oriented Data Engineer with over 4 years of experience delivering scalable data engineering solutions 
+              in healthcare and enterprise domains. Specialized in developing robust ETL pipelines using Python, Oracle PL/SQL, 
+              and PySpark across cloud platforms like Azure and AWS.
+            </p>
+          </div>
+
           {/* Square Profile Image Section */}
           <div className="flex justify-center mb-8">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-4 border-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 p-1 shadow-xl">
                 <div className="w-full h-full rounded-xl overflow-hidden bg-white">
                   <img
-                    src="/Teja-karu-portfolio/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png"
+                    src="/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png"
                     alt="Teja Karu - Data Engineer"
                     className="w-full h-full object-cover object-center"
                     onError={(e) => {
@@ -114,16 +126,8 @@ const Hero = () => {
             </h2>
             {/* Role prominence - larger and more visible */}
             <h1 className="text-4xl md:text-6xl font-bold text-blue-600 mb-4 leading-tight">
-              Data Engineer
+              Python SQL PySpark Data Analyst
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 mb-6 font-medium">
-              4+ Years Experience | Azure & AWS | Healthcare & Enterprise Data Solutions
-            </p>
-            <p className="text-lg text-slate-500 max-w-3xl mb-8 mx-auto leading-relaxed">
-              Detail-oriented Data Engineer with over 4 years of experience delivering scalable data engineering solutions 
-              in healthcare and enterprise domains. Specialized in developing robust ETL pipelines using Python, Oracle PL/SQL, 
-              and PySpark across cloud platforms like Azure and AWS.
-            </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
