@@ -6,7 +6,7 @@ const Hero = () => {
   const handleResumeDownload = () => {
     // Create a link element and trigger download
     const link = document.createElement('a');
-    link.href = '/resume.pdf'; // You'll need to add your resume.pdf file to the public folder
+    link.href = '/Teja-karu-portfolio/resume.pdf'; // Updated path for GitHub Pages
     link.download = 'Teja_Karu_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -81,19 +81,19 @@ const Hero = () => {
         <div className="text-center">
           <div className="mb-8">
             {/* Role prominence - larger and more visible */}
-            <h1 className="text-3xl md:text-4xl font-bold text-blue-600 mb-2 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-2 leading-tight">
               DATA ENGINEER
             </h1>
-            <h2 className="text-5xl md:text-6xl font-bold text-slate-800 mb-4 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4 leading-tight">
               <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">Teja Karu</span>
             </h2>
             <p className="text-xl md:text-2xl text-slate-600 mb-6 font-medium">
               4+ Years Experience | Azure & AWS | Healthcare & Enterprise
             </p>
             <p className="text-lg text-slate-500 max-w-3xl mb-8 mx-auto leading-relaxed">
-              Detail-oriented Data Engineer delivering scalable ETL pipelines using Python, PySpark, and cloud platforms. 
-              Specialized in healthcare data processing, dimensional modeling, and building analytics-ready datasets 
-              in Snowflake with Power BI visualization.
+              Detail-oriented Data Engineer with over 4 years of experience delivering scalable data engineering solutions 
+              in healthcare and enterprise domains. Specialized in developing robust ETL pipelines using Python, Oracle PL/SQL, 
+              and PySpark across cloud platforms like Azure and AWS.
             </p>
           </div>
 
@@ -103,9 +103,14 @@ const Hero = () => {
               <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-4 border-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 p-1 shadow-xl">
                 <div className="w-full h-full rounded-xl overflow-hidden bg-white">
                   <img
-                    src="/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png"
+                    src="/Teja-karu-portfolio/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png"
                     alt="Teja Karu - Data Engineer"
                     className="w-full h-full object-cover object-center"
+                    onError={(e) => {
+                      console.log('Image failed to load, trying alternative path');
+                      // Fallback to a placeholder or default image if needed
+                      e.currentTarget.style.display = 'none';
+                    }}
                   />
                 </div>
               </div>
