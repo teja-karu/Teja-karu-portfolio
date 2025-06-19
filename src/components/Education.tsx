@@ -11,7 +11,7 @@ const Education = () => {
             Education
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Academic foundation supporting advanced data engineering expertise
+            Academic foundation supporting advanced data analysis expertise
           </p>
         </div>
         
@@ -31,7 +31,7 @@ const Education = () => {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div className="flex items-center gap-2 text-slate-600">
                 <Calendar size={20} className="text-indigo-500" />
-                <span className="font-medium">August 2023 – May 2025</span>
+                <span className="font-medium">Aug. 2023 – May 2025</span>
               </div>
               <div className="flex items-center gap-2 text-slate-600">
                 <MapPin size={20} className="text-purple-500" />

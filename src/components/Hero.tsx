@@ -79,37 +79,17 @@ const Hero = () => {
       <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-8 animate-fade-in relative z-10">
         {/* Content Section */}
         <div className="text-center">
-          <div className="mb-8">
-            {/* Name prominence - larger and more visible */}
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-4 leading-tight">
-              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">Teja Karu</span>
-            </h1>
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-2 leading-tight">
-              DATA ENGINEER
-            </h2>
-            <p className="text-xl md:text-2xl text-slate-600 mb-6 font-medium">
-              4+ Years Experience | Azure & AWS | Healthcare & Enterprise
-            </p>
-            <p className="text-lg text-slate-500 max-w-3xl mb-8 mx-auto leading-relaxed">
-              Detail-oriented Data Engineer with over 4 years of experience delivering scalable data engineering solutions 
-              in healthcare and enterprise domains. Specialized in developing robust ETL pipelines using Python, Oracle PL/SQL, 
-              and PySpark across cloud platforms like Azure and AWS. Adept at performance tuning, data modeling, and building 
-              analytics-ready datasets in Snowflake and PostgreSQL.
-            </p>
-          </div>
-
           {/* Square Profile Image Section */}
           <div className="flex justify-center mb-8">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-4 border-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 p-1 shadow-xl">
                 <div className="w-full h-full rounded-xl overflow-hidden bg-white">
                   <img
-                    src="/Teja-karu-portfolio/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png"
-                    alt="Teja Karu - Data Engineer"
+                    src="/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png"
+                    alt="Teja Karu - Data Analyst"
                     className="w-full h-full object-cover object-center"
                     onError={(e) => {
-                      console.log('Image failed to load, trying alternative path');
-                      // Fallback to a placeholder or default image if needed
+                      console.log('Image failed to load');
                       e.currentTarget.style.display = 'none';
                     }}
                   />
@@ -125,6 +105,26 @@ const Hero = () => {
               {/* Glow effect with lighter colors */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-300/30 via-indigo-300/30 to-purple-300/30 blur-xl -z-10 animate-pulse"></div>
             </div>
+          </div>
+
+          {/* Name and Role under picture */}
+          <div className="mb-8">
+            <h2 className="text-2xl md:text-3xl font-medium text-slate-600 mb-2">
+              Hi, I'm Teja Karu
+            </h2>
+            {/* Role prominence - larger and more visible */}
+            <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4 leading-tight">
+              Python SQL PySpark Data Analyst
+            </h1>
+            <p className="text-xl md:text-2xl text-slate-600 mb-6 font-medium">
+              2+ Years Experience | Azure & AWS | Healthcare Data Analytics
+            </p>
+            <p className="text-lg text-slate-500 max-w-3xl mb-8 mx-auto leading-relaxed">
+              Python SQL PySpark Data Analyst with 2+ years in developing scalable data pipelines. Experience with 
+              cloud-based platforms (Azure Data Factory, Databricks, Snowflake) and solid skills in Power BI and Tableau in 
+              terms of data visualization. Proficient in big data tools Hadoop, Spark, Kafka, and databases like PostgreSQL and 
+              MongoDB. Passionate in providing actionable intelligence to help grow businesses.
+            </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">

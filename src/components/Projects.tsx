@@ -1,5 +1,5 @@
 
-import { ExternalLink, Github, Calendar, MapPin } from "lucide-react";
+import { ExternalLink, Github, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -7,42 +7,27 @@ const Projects = () => {
   const projects = [
     {
       title: "Building Spotify Data Pipeline",
-      description: "Built a scalable pipeline to extract data from Spotify API, transform using AWS services, and load into Snowflake for analytics and Power BI reporting. Created an Airflow DAG to manage data extraction and log metrics into AWS CloudWatch. Transformed data with AWS Lambda and Apache Spark (PySpark), improving processing speed by 40%.",
+      description: "To build a scalable pipeline to extract data from Spotify API, transform using AWS services, and load into Snowflake for analytics and Power BI for reporting.",
       image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&w=800&q=80",
-      tags: ["Airflow", "Apache Spark", "Amazon S3", "Snowflake", "Power BI", "AWS Lambda", "PySpark"],
-      date: "May 2023",
+      tags: ["Airflow", "Apache Spark", "Amazon S3", "Snowflake", "Power BI"],
+      date: "August 2024",
       achievements: [
-        "Reduced ETL processing time by 45%",
-        "Enhanced reporting efficiency by 55%",
-        "Improved processing speed by 40%"
+        "Created an Airflow DAG to manage data extraction from Spotify API and log metrics into AWS CloudWatch.",
+        "Transformed data with AWS Lambda and Apache Spark (PySpark), improving processing speed by 40% and transformed data into Snowflake via Snowpipe, optimized SQL queries, and built Power BI dashboards for visualization.",
+        "Reduced ETL processing time by 45 percent and enhanced reporting efficiency by 55 percent."
       ],
       liveUrl: "#",
       githubUrl: "#"
     },
     {
       title: "E-commerce Data Pipeline using Databricks",
-      description: "Developed an end-to-end data pipeline to ingest raw data into Azure Data Lake Storage, transform it using Apache Spark on Databricks, and create interactive dashboards in Power BI. Set up automated mechanisms to upload raw data files and used Apache Spark on Databricks to clean, join, and structure the raw data for analysis.",
+      description: "To develop an end-to-end data pipeline to ingest raw data into Azure Data Lake Storage, transform it using Apache Spark on Databricks, and create interactive dashboards in Power BI to efficiently process and analyze the data.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
-      tags: ["Azure Data Lake", "Apache Spark", "Power BI", "PySpark", "Databricks"],
-      date: "August 2024",
-      achievements: [
-        "Achieved 30% faster data processing",
-        "Enabled better insights into e-commerce trends",
-        "Automated data ingestion mechanism"
-      ],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Employee Performance Analysis",
-      description: "Developed a streamlined system to extract, clean, analyze, and visualize employee performance data to help HR and management make data-driven decisions. Extracted performance data from internal HR system using SQL and cleaned the data using Python scripts. Created interactive Power BI dashboards to visualize employee KPIs and performance metrics.",
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80",
-      tags: ["SQL", "Power BI", "Python", "HTML", "Data Analysis"],
+      tags: ["Azure Data Lake", "Apache Spark", "Power BI", "Pyspark"],
       date: "February 2025",
       achievements: [
-        "Reduced manual reporting time by 30%",
-        "Improved speed and accuracy of performance evaluations",
-        "Created interactive KPI dashboards"
+        "Set up an automated mechanism to upload raw data files into Azure Data Lake Storage, ensuring data is available for processing and used Apache Spark on Databricks to clean, join, and structure the raw data for analysis.",
+        "Achieved 30% faster data processing by utilizing Apache Spark, Databricks, enabling better insights into e-commerce trends."
       ],
       liveUrl: "#",
       githubUrl: "#"
@@ -54,7 +39,7 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-            Featured Projects
+            Projects
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Key data engineering and analytics projects showcasing expertise in building 
@@ -62,7 +47,7 @@ const Projects = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] border-slate-200 bg-white shadow-lg">
               <div className="relative overflow-hidden rounded-t-lg">
@@ -84,11 +69,11 @@ const Projects = () => {
                 {/* Key Achievements */}
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-slate-700 mb-2">Key Achievements:</h4>
-                  <ul className="space-y-1">
+                  <ul className="space-y-2">
                     {project.achievements.map((achievement, achIndex) => (
-                      <li key={achIndex} className="text-xs text-slate-600 flex items-center gap-1">
-                        <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                        {achievement}
+                      <li key={achIndex} className="text-xs text-slate-600 flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-1.5 flex-shrink-0"></div>
+                        <span>{achievement}</span>
                       </li>
                     ))}
                   </ul>
