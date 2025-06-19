@@ -80,12 +80,12 @@ const Hero = () => {
         {/* Content Section */}
         <div className="text-center">
           <div className="mb-8">
-            {/* Role prominence - larger and more visible */}
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-2 leading-tight">
-              DATA ENGINEER
-            </h1>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4 leading-tight">
+            {/* Name prominence - larger and more visible */}
+            <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-4 leading-tight">
               <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">Teja Karu</span>
+            </h1>
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-2 leading-tight">
+              DATA ENGINEER
             </h2>
             <p className="text-xl md:text-2xl text-slate-600 mb-6 font-medium">
               4+ Years Experience | Azure & AWS | Healthcare & Enterprise
@@ -93,7 +93,8 @@ const Hero = () => {
             <p className="text-lg text-slate-500 max-w-3xl mb-8 mx-auto leading-relaxed">
               Detail-oriented Data Engineer with over 4 years of experience delivering scalable data engineering solutions 
               in healthcare and enterprise domains. Specialized in developing robust ETL pipelines using Python, Oracle PL/SQL, 
-              and PySpark across cloud platforms like Azure and AWS.
+              and PySpark across cloud platforms like Azure and AWS. Adept at performance tuning, data modeling, and building 
+              analytics-ready datasets in Snowflake and PostgreSQL.
             </p>
           </div>
 
