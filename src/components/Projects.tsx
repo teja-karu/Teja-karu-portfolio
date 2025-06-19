@@ -7,10 +7,10 @@ const Projects = () => {
   const projects = [
     {
       title: "Building Spotify Data Pipeline",
-      description: "To build a scalable pipeline to extract data from Spotify API, transform using AWS services, and load into Snowflake for analytics and Power BI for reporting.",
+      description: "Built a scalable pipeline to extract data from Spotify API, transform using AWS services, and load into Snowflake for analytics and Power BI for reporting.",
       image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&w=800&q=80",
       tags: ["Airflow", "Apache Spark", "Amazon S3", "Snowflake", "Power BI"],
-      date: "August 2024",
+      date: "May 2023",
       achievements: [
         "Created an Airflow DAG to manage data extraction from Spotify API and log metrics into AWS CloudWatch.",
         "Transformed data with AWS Lambda and Apache Spark (PySpark), improving processing speed by 40% and transformed data into Snowflake via Snowpipe, optimized SQL queries, and built Power BI dashboards for visualization.",
@@ -21,13 +21,26 @@ const Projects = () => {
     },
     {
       title: "E-commerce Data Pipeline using Databricks",
-      description: "To develop an end-to-end data pipeline to ingest raw data into Azure Data Lake Storage, transform it using Apache Spark on Databricks, and create interactive dashboards in Power BI to efficiently process and analyze the data.",
+      description: "Developed an end-to-end data pipeline to ingest raw data into Azure Data Lake Storage, transform it using Apache Spark on Databricks, and create interactive dashboards in Power BI.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
-      tags: ["Azure Data Lake", "Apache Spark", "Power BI", "Pyspark"],
-      date: "February 2025",
+      tags: ["Azure Data Lake", "Apache Spark", "Power BI", "PySpark"],
+      date: "August 2024",
       achievements: [
         "Set up an automated mechanism to upload raw data files into Azure Data Lake Storage, ensuring data is available for processing and used Apache Spark on Databricks to clean, join, and structure the raw data for analysis.",
         "Achieved 30% faster data processing by utilizing Apache Spark, Databricks, enabling better insights into e-commerce trends."
+      ],
+      liveUrl: "#",
+      githubUrl: "#"
+    },
+    {
+      title: "Employee Performance Analysis",
+      description: "Developed a streamlined system to extract, clean, analyze, and visualize employee performance data to help HR and management make data-driven decisions.",
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80",
+      tags: ["SQL", "Power BI", "Python", "HTML"],
+      date: "February 2025",
+      achievements: [
+        "Extracted performance data from internal HR system using SQL and cleaned and transformed the data using Python scripts to ensure it was ready for analysis.",
+        "Created interactive Power BI dashboards to visualize employee KPIs and performance metrics and reduced manual reporting time by 30% and improved the speed and accuracy of performance evaluations."
       ],
       liveUrl: "#",
       githubUrl: "#"
@@ -47,7 +60,7 @@ const Projects = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] border-slate-200 bg-white shadow-lg">
               <div className="relative overflow-hidden rounded-t-lg">

@@ -85,8 +85,8 @@ const Hero = () => {
               <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-4 border-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 p-1 shadow-xl">
                 <div className="w-full h-full rounded-xl overflow-hidden bg-white">
                   <img
-                    src="/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png"
-                    alt="Teja Karu - Data Analyst"
+                    src="/Teja-karu-portfolio/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png"
+                    alt="Teja Karu - Data Engineer"
                     className="w-full h-full object-cover object-center"
                     onError={(e) => {
                       console.log('Image failed to load');
@@ -107,23 +107,22 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Name and Role under picture */}
+          {/* Name and Role under picture - Role bigger than name */}
           <div className="mb-8">
-            <h2 className="text-2xl md:text-3xl font-medium text-slate-600 mb-2">
+            <h2 className="text-xl md:text-2xl font-medium text-slate-600 mb-2">
               Hi, I'm Teja Karu
             </h2>
             {/* Role prominence - larger and more visible */}
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4 leading-tight">
-              Python SQL PySpark Data Analyst
+            <h1 className="text-4xl md:text-6xl font-bold text-blue-600 mb-4 leading-tight">
+              Data Engineer
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 mb-6 font-medium">
-              2+ Years Experience | Azure & AWS | Healthcare Data Analytics
+              4+ Years Experience | Azure & AWS | Healthcare & Enterprise Data Solutions
             </p>
             <p className="text-lg text-slate-500 max-w-3xl mb-8 mx-auto leading-relaxed">
-              Python SQL PySpark Data Analyst with 2+ years in developing scalable data pipelines. Experience with 
-              cloud-based platforms (Azure Data Factory, Databricks, Snowflake) and solid skills in Power BI and Tableau in 
-              terms of data visualization. Proficient in big data tools Hadoop, Spark, Kafka, and databases like PostgreSQL and 
-              MongoDB. Passionate in providing actionable intelligence to help grow businesses.
+              Detail-oriented Data Engineer with over 4 years of experience delivering scalable data engineering solutions 
+              in healthcare and enterprise domains. Specialized in developing robust ETL pipelines using Python, Oracle PL/SQL, 
+              and PySpark across cloud platforms like Azure and AWS.
             </p>
           </div>
           

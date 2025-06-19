@@ -5,19 +5,35 @@ import { Building2, Calendar, MapPin, CheckCircle } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      company: "Team Tech Solutions",
-      role: "Data Analyst",
+      company: "Innovaccer Inc.",
+      role: "Data Engineer",
+      duration: "September 2023 – December 2024",
+      location: "California, United States",
+      achievements: [
+        "Designed and automated robust ETL pipelines using Azure Data Factory, ingesting large volumes of raw clinical and claims data (HL7, CCDA, EHR) into Azure Data Lake Storage Gen2 and transforming it into analytics-ready formats in Snowflake, reducing processing time by 60%.",
+        "Engineered scalable batch data workflows on Databricks using PySpark to unify disparate healthcare datasets, enabling downstream analytics and regulatory reporting with improved efficiency and reliability.",
+        "Developed custom data models and pipelines supporting quality measures, patient risk scoring, and utilization trends, directly powering client-facing Power BI dashboards used in population health management and care optimization.",
+        "Orchestrated complex data workflows and dependencies with Apache Airflow, ensuring compliance with data refresh SLAs for payer and provider datasets.",
+        "Built and optimized healthcare-specific dimensional models using SQL and PostgreSQL, performing validations and integrity checks to support accurate reporting and billing analytics.",
+        "Partnered with clinical SMEs and analysts to curate a centralized data dictionary and reusable transformation logic, enhancing visibility and consistency across all data engineering workflows."
+      ],
+      color: "from-blue-500 to-indigo-600"
+    },
+    {
+      company: "Accenture",
+      role: "Data Engineer",
       duration: "June 2020 – June 2023",
       location: "Hyderabad, Telangana",
       achievements: [
-        "Ingested and processed large volumes of healthcare data (Claims, Clinical, Eligibility) using Azure Data Factory and stored it in Azure Data Lake Storage Gen2.",
-        "Developed scalable ETL pipelines in Databricks using PySpark, ensuring data was cleaned, standardized, and HIPAA-compliant.",
-        "Migrated reporting workflows to Snowflake, reducing query execution time by 40 percent and improving data accessibility.",
-        "Created advanced SQL queries and automated reporting pipelines, enabling performance and risk-based analytics for healthcare clients.",
-        "Designed interactive Power BI dashboards to visualize quality metrics, utilization trends, and provider performance, cutting manual reporting time by 50 percent.",
-        "Built a centralized Data Dictionary and standardized metrics to improve collaboration, data governance, and team efficiency."
+        "Developed and maintained scalable Oracle PL/SQL and Python-based applications for supply chain analytics, leveraging packages, procedures, functions, and hierarchical queries for complex data processing.",
+        "Designed and optimized ETL workflows using Oracle PL/SQL and Python (Pandas), improving system efficiency and reducing query execution time by 45%.",
+        "Performed advanced performance tuning using Oracle AWR reports, execution plans, and optimization hints to ensure high data availability and responsiveness.",
+        "Automated routine tasks and data refresh workflows using Python scripts and pandas dataframes, streamlining support services and minimizing manual effort.",
+        "Collaborated with cross-functional teams in a global delivery model, supporting 24/7 application uptime and adhering to on-call rotational shifts.",
+        "Ensured compliance with change management protocols and handled high-priority incidents by proactively monitoring, debugging, and resolving issues within SLAs.",
+        "Delivered clean, production-ready code while coordinating across onshore-offshore teams, driving system reliability and consistent data delivery."
       ],
-      color: "from-blue-500 to-indigo-600"
+      color: "from-green-500 to-teal-600"
     }
   ];
 
@@ -29,8 +45,8 @@ const Experience = () => {
             Professional Experience
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            3 years of experience as a Data Analyst developing scalable data pipelines 
-            and providing actionable intelligence for healthcare domain.
+            4+ years of experience as a Data Engineer delivering scalable data engineering 
+            solutions in healthcare and enterprise domains.
           </p>
         </div>
         
