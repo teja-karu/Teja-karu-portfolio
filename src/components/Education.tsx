@@ -1,53 +1,84 @@
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { GraduationCap, Calendar, MapPin } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Education = () => {
+  const education = [
+    {
+      degree: "Master of Science in Data Science",
+      school: "Illinois Institute of Technology",
+      location: "Chicago, Illinois",
+      date: "Expected May 2025",
+      details: [
+        "Current GPA: 3.85/4.0",
+        "Relevant Coursework: Machine Learning, Big Data Analytics, Statistical Methods, Data Mining",
+        "Research Focus: Advanced Analytics and Predictive Modeling"
+      ]
+    },
+    {
+      degree: "Bachelor of Technology in Electronics and Communication Engineering",
+      school: "Jawaharlal Nehru Technological University",
+      location: "Hyderabad, India",
+      date: "May 2020",
+      details: [
+        "GPA: 3.2/4.0",
+        "Relevant Coursework: Data Structures, Algorithms, Database Management Systems",
+        "Final Year Project: IoT-based Data Collection and Analysis System"
+      ]
+    }
+  ];
+
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-20 bg-slate-50">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">
             Education
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Academic foundation supporting advanced data analysis expertise
           </p>
         </div>
-        
-        <Card className="shadow-xl hover:shadow-2xl transition-all duration-500 border-slate-200">
-          <CardHeader className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-t-lg">
-            <CardTitle className="flex items-center gap-3 text-2xl">
-              <GraduationCap size={32} />
-              <div>
-                <div className="text-2xl font-bold">Lindsey Wilson College</div>
-                <div className="text-indigo-100 text-lg font-medium">
-                  Masters in Computer/Information Technology Administration and Management
+
+        <div className="space-y-8">
+          {education.map((edu, index) => (
+            <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+              <CardHeader>
+                <div className="flex items-start justify-between flex-wrap gap-4">
+                  <div className="flex-1">
+                    <CardTitle className="text-xl font-bold text-slate-800 mb-2 flex items-center gap-2">
+                      <GraduationCap className="text-blue-600" size={24} />
+                      {edu.degree}
+                    </CardTitle>
+                    <CardDescription className="text-lg font-semibold text-slate-700">
+                      {edu.school}
+                    </CardDescription>
+                  </div>
+                  <div className="text-right text-slate-600">
+                    <div className="flex items-center gap-1 mb-1">
+                      <Calendar size={16} />
+                      <span>{edu.date}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <MapPin size={16} />
+                      <span>{edu.location}</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="p-8">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <div className="flex items-center gap-2 text-slate-600">
-                <Calendar size={20} className="text-indigo-500" />
-                <span className="font-medium">Aug. 2023 – May 2025</span>
-              </div>
-              <div className="flex items-center gap-2 text-slate-600">
-                <MapPin size={20} className="text-purple-500" />
-                <span className="font-medium">Columbia, Kentucky</span>
-              </div>
-            </div>
-            <div className="mt-6 p-6 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg border border-indigo-200">
-              <p className="text-slate-700 leading-relaxed">
-                Advanced graduate program focusing on information technology management, 
-                data systems administration, and enterprise-scale technology solutions. 
-                Curriculum emphasizing cloud architecture, data governance, and strategic 
-                IT leadership in modern data-driven organizations.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  {edu.details.map((detail, idx) => (
+                    <li key={idx} className="text-slate-600 flex items-start gap-2">
+                      <span className="text-blue-600 mt-1.5">•</span>
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );

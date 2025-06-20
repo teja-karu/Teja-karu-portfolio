@@ -97,7 +97,7 @@ const Hero = () => {
               <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-4 border-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 p-1 shadow-xl">
                 <div className="w-full h-full rounded-xl overflow-hidden bg-white">
                   <img
-                    src="/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png"
+                    src="/Teja-karu-portfolio/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png"
                     alt="Teja Karu - Data Engineer"
                     className="w-full h-full object-cover object-center"
                     onError={(e) => {
