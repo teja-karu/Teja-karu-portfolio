@@ -16,10 +16,10 @@ const Education = () => {
       ]
     },
     {
-      degree: "Bachelor of Technology in Electronics and Communication Engineering",
-      school: "Jawaharlal Nehru Technological University",
+      degree: "Bachelor of Technology in Information Technology",
+      school: "MLR Institute Of Technology",
       location: "Hyderabad, India",
-      date: "May 2020",
+      date: "May 2022",
       details: [
         "GPA: 3.2/4.0",
         "Relevant Coursework: Data Structures, Algorithms, Database Management Systems",

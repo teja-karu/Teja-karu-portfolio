@@ -56,7 +56,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Python SQL PySpark Data Analyst with 2+ years of experience developing scalable data pipelines. 
+            Python SQL PySpark Data Analyst with 4+ years of experience developing scalable data pipelines. 
             I specialize in cloud-based platforms and have solid skills in data visualization, 
             passionate about turning data into actionable business intelligence.
           </p>
@@ -89,19 +89,6 @@ const About = () => {
               </div>
               
               <div className="space-y-6">
-                <div className="border-l-4 border-blue-400 pl-6">
-                  <div className="flex items-center mb-2">
-                    <span className="bg-blue-400 text-white text-xs font-bold px-2 py-1 rounded mr-3">CURRENT</span>
-                    <h4 className="text-xl font-semibold text-blue-400">Data Analyst at Team Tech Solutions</h4>
-                  </div>
-                  <p className="text-gray-300 mb-3">Leading healthcare data analytics initiatives, developing scalable ETL pipelines, and creating impactful business intelligence solutions.</p>
-                  <ul className="text-gray-400 text-sm space-y-1">
-                    <li>• Architected data pipelines processing 500K+ healthcare records monthly</li>
-                    <li>• Improved data processing efficiency by 40% through pipeline optimization</li>
-                    <li>• Deployed 15+ automated reports and real-time dashboards</li>
-                  </ul>
-                </div>
-                
                 <div className="border-l-4 border-purple-400 pl-6">
                   <div className="flex items-center mb-2">
                     <span className="bg-purple-400 text-white text-xs font-bold px-2 py-1 rounded mr-3">EDUCATION</span>
@@ -139,7 +126,7 @@ const About = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
-              <div className="text-3xl font-bold text-blue-600 mb-1">2+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-1">4+</div>
               <div className="text-slate-600 text-sm font-medium">Years Experience</div>
             </div>
             <div className="text-center p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl border border-purple-200">

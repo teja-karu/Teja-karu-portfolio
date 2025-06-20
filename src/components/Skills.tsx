@@ -1,7 +1,7 @@
 
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
-import { BarChart, Bar, XAxis, YAxis, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, PieChart, Pie, Cell } from "recharts";
-import { Database, Cloud, BarChart3, Cpu, Zap, GitBranch } from "lucide-react";
+import { PieChart, Pie, Cell } from "recharts";
+import { Database, Cloud, BarChart3, Cpu } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Skills = () => {
@@ -9,7 +9,7 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Data Engineering & ETL",
-      icon: GitBranch,
+      icon: Database,
       skills: [
         { name: "Apache Spark", level: 95, experience: "3+ years" },
         { name: "Apache Airflow", level: 90, experience: "2+ years" },
@@ -57,16 +57,6 @@ const Skills = () => {
     }
   ];
 
-  // Data for radar chart showing expertise areas
-  const expertiseRadarData = [
-    { area: "Data Pipelines", score: 95 },
-    { area: "Cloud Architecture", score: 88 },
-    { area: "Data Modeling", score: 92 },
-    { area: "Big Data Processing", score: 90 },
-    { area: "Analytics & BI", score: 89 },
-    { area: "Data Quality", score: 93 }
-  ];
-
   // Technology proficiency distribution
   const techProficiencyData = [
     { category: "Expert (90-100%)", count: 8, color: "#10B981" },
@@ -76,8 +66,6 @@ const Skills = () => {
   ];
 
   const chartConfig = {
-    level: { label: "Proficiency Level", color: "#8B5CF6" },
-    score: { label: "Expertise Score", color: "#3B82F6" },
     count: { label: "Number of Technologies", color: "#10B981" }
   };
 
@@ -100,38 +88,10 @@ const Skills = () => {
           </p>
         </div>
 
-        {/* Skills Overview Charts */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {/* Expertise Radar Chart */}
-          <Card className="shadow-xl hover:shadow-2xl transition-all duration-300">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Zap className="text-blue-600" size={24} />
-                Data Engineering Expertise
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ChartContainer config={chartConfig} className="h-80">
-                <RadarChart data={expertiseRadarData}>
-                  <PolarGrid />
-                  <PolarAngleAxis dataKey="area" />
-                  <PolarRadiusAxis angle={90} domain={[0, 100]} />
-                  <Radar
-                    name="Expertise Score"
-                    dataKey="score"
-                    stroke="#3B82F6"
-                    fill="#3B82F6"
-                    fillOpacity={0.3}
-                    strokeWidth={3}
-                  />
-                  <ChartTooltip content={<ChartTooltipContent />} />
-                </RadarChart>
-              </ChartContainer>
-            </CardContent>
-          </Card>
-
+        {/* Skills Overview Chart */}
+        <div className="flex justify-center mb-16">
           {/* Technology Proficiency Distribution */}
-          <Card className="shadow-xl hover:shadow-2xl transition-all duration-300">
+          <Card className="shadow-xl hover:shadow-2xl transition-all duration-300 max-w-md">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Database className="text-green-600" size={24} />

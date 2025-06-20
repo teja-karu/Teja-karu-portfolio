@@ -97,7 +97,7 @@ const Hero = () => {
               <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-4 border-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 p-1 shadow-xl">
                 <div className="w-full h-full rounded-xl overflow-hidden bg-white">
                   <img
-                    src="/Teja-karu-portfolio/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png"
+                    src="/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png"
                     alt="Teja Karu - Data Engineer"
                     className="w-full h-full object-cover object-center"
                     onError={(e) => {
@@ -124,10 +124,15 @@ const Hero = () => {
             <h2 className="text-xl md:text-2xl font-medium text-slate-600 mb-2">
               Hi, I'm Teja Karu
             </h2>
-            {/* Role prominence - larger and more visible */}
-            <h1 className="text-4xl md:text-6xl font-bold text-blue-600 mb-4 leading-tight">
-              Python SQL PySpark Data Analyst
-            </h1>
+            {/* Role prominence - larger and more impressive with creative styling */}
+            <div className="relative">
+              <h1 className="text-4xl md:text-6xl font-bold text-black mb-4 leading-tight relative z-10">
+                Data Engineer
+              </h1>
+              {/* Creative background elements */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-indigo-600/10 rounded-lg blur-sm -z-10 transform -rotate-1"></div>
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-blue-100/20 to-transparent rounded-lg -z-10 transform rotate-1"></div>
+            </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
