@@ -54,15 +54,15 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* Square Profile Image Section - Using a placeholder */}
+          {/* Square Profile Image Section - Using your uploaded image */}
           <div className="flex justify-center mb-8">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-4 border-slate-300 shadow-xl bg-slate-100 flex items-center justify-center">
-                <div className="text-slate-400 text-center">
-                  <div className="w-20 h-20 bg-slate-300 rounded-full mx-auto mb-4"></div>
-                  <p className="text-lg font-medium">Teja Karu</p>
-                  <p className="text-sm">Data Engineer</p>
-                </div>
+              <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-4 border-slate-300 shadow-xl">
+                <img 
+                  src="/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png" 
+                  alt="Teja Karu - Data Engineer"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
