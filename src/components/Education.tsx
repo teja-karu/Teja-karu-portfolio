@@ -5,17 +5,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const Education = () => {
   const education = [
     {
-      degree: "Master of Science in Data Science",
-      school: "Illinois Institute of Technology",
-      location: "Chicago, Illinois",
-      date: "Expected May 2025",
-      details: [
-        "Current GPA: 3.85/4.0",
-        "Relevant Coursework: Machine Learning, Big Data Analytics, Statistical Methods, Data Mining",
-        "Research Focus: Advanced Analytics and Predictive Modeling"
-      ]
-    },
-    {
       degree: "Bachelor of Technology in Information Technology",
       school: "MLR Institute Of Technology",
       location: "Hyderabad, India",
@@ -47,7 +36,7 @@ const Education = () => {
                 <div className="flex items-start justify-between flex-wrap gap-4">
                   <div className="flex-1">
                     <CardTitle className="text-xl font-bold text-slate-800 mb-2 flex items-center gap-2">
-                      <GraduationCap className="text-blue-600" size={24} />
+                      <GraduationCap className="text-slate-600" size={24} />
                       {edu.degree}
                     </CardTitle>
                     <CardDescription className="text-lg font-semibold text-slate-700">
@@ -70,7 +59,7 @@ const Education = () => {
                 <ul className="space-y-2">
                   {edu.details.map((detail, idx) => (
                     <li key={idx} className="text-slate-600 flex items-start gap-2">
-                      <span className="text-blue-600 mt-1.5">•</span>
+                      <span className="text-slate-500 mt-1.5">•</span>
                       <span>{detail}</span>
                     </li>
                   ))}

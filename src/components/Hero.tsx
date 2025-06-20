@@ -21,62 +21,25 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-100 to-purple-50 px-4 pt-16 relative overflow-hidden">
-      {/* Light Solar System Background */}
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-slate-100 to-slate-50 px-4 pt-16 relative overflow-hidden">
+      {/* Simplified Background */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Stars Background */}
+        {/* Simple dots pattern */}
         <div className="absolute inset-0">
-          {Array.from({ length: 50 }).map((_, i) => (
+          {Array.from({ length: 30 }).map((_, i) => (
             <div
               key={i}
-              className="absolute w-1 h-1 bg-blue-300 rounded-full animate-pulse"
+              className="absolute w-1 h-1 bg-slate-300 rounded-full opacity-30"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                opacity: Math.random() * 0.4 + 0.1
               }}
             />
           ))}
         </div>
-
-        {/* Sun - Central */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div className="w-12 h-12 bg-gradient-to-r from-yellow-300 via-orange-300 to-amber-300 rounded-full animate-pulse shadow-lg">
-            <div className="w-full h-full bg-gradient-to-r from-yellow-200 to-orange-200 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
-          </div>
-          {/* Sun's glow */}
-          <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-yellow-200/30 to-orange-200/30 rounded-full blur-xl -translate-x-4 -translate-y-4 animate-pulse"></div>
-        </div>
-
-        {/* Orbital Paths */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          {/* Orbital rings with light colors */}
-          <div className="w-32 h-32 border border-blue-200/40 rounded-full absolute -translate-x-16 -translate-y-16"></div>
-          <div className="w-48 h-48 border border-indigo-200/40 rounded-full absolute -translate-x-24 -translate-y-24"></div>
-          <div className="w-64 h-64 border border-purple-200/40 rounded-full absolute -translate-x-32 -translate-y-32"></div>
-          <div className="w-80 h-80 border border-pink-200/40 rounded-full absolute -translate-x-40 -translate-y-40"></div>
-        </div>
-
-        {/* Planets with light colors */}
-        <div className="absolute top-1/2 left-1/2 w-32 h-32 animate-spin" style={{ animationDuration: '15s' }}>
-          <div className="w-2 h-2 bg-blue-300 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1"></div>
-        </div>
-
-        <div className="absolute top-1/2 left-1/2 w-48 h-48 animate-spin" style={{ animationDuration: '25s' }}>
-          <div className="w-3 h-3 bg-gradient-to-r from-yellow-200 to-orange-200 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1.5"></div>
-        </div>
-
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 animate-spin" style={{ animationDuration: '35s' }}>
-          <div className="w-4 h-4 bg-gradient-to-r from-blue-300 to-green-300 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 shadow-lg"></div>
-        </div>
-
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 animate-spin" style={{ animationDuration: '50s' }}>
-          <div className="w-3 h-3 bg-gradient-to-r from-red-300 to-orange-300 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1.5"></div>
-        </div>
       </div>
       
-      <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-8 animate-fade-in relative z-10">
+      <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-8 relative z-10">
         {/* Content Section */}
         <div className="text-center">
           {/* Content above picture */}
@@ -91,47 +54,32 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* Square Profile Image Section */}
+          {/* Square Profile Image Section - Using a placeholder */}
           <div className="flex justify-center mb-8">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-4 border-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 p-1 shadow-xl">
-                <div className="w-full h-full rounded-xl overflow-hidden bg-white">
-                  <img
-                    src="/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png"
-                    alt="Teja Karu - Data Engineer"
-                    className="w-full h-full object-cover object-center"
-                    onError={(e) => {
-                      console.log('Image failed to load');
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
+              <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-4 border-slate-300 shadow-xl bg-slate-100 flex items-center justify-center">
+                <div className="text-slate-400 text-center">
+                  <div className="w-20 h-20 bg-slate-300 rounded-full mx-auto mb-4"></div>
+                  <p className="text-lg font-medium">Teja Karu</p>
+                  <p className="text-sm">Data Engineer</p>
                 </div>
               </div>
-              
-              {/* Enhanced decorative elements with light colors */}
-              <div className="absolute -top-3 -right-3 w-6 h-6 bg-gradient-to-r from-blue-300 to-indigo-300 rounded-full animate-pulse shadow-lg"></div>
-              <div className="absolute -bottom-3 -left-3 w-5 h-5 bg-gradient-to-r from-indigo-300 to-purple-300 rounded-full animate-pulse delay-1000 shadow-lg"></div>
-              <div className="absolute top-1/4 -left-6 w-3 h-3 border-2 border-cyan-300/70 rotate-45 animate-spin" style={{ animationDuration: '15s' }}></div>
-              <div className="absolute bottom-1/4 -right-6 w-4 h-4 bg-gradient-to-r from-teal-300/50 to-emerald-300/50 rounded-full animate-bounce delay-2000"></div>
-              
-              {/* Glow effect with lighter colors */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-300/30 via-indigo-300/30 to-purple-300/30 blur-xl -z-10 animate-pulse"></div>
             </div>
           </div>
 
-          {/* Name and Role under picture - Role bigger than name */}
+          {/* Name and Role under picture */}
           <div className="mb-8">
             <h2 className="text-xl md:text-2xl font-medium text-slate-600 mb-2">
               Hi, I'm Teja Karu
             </h2>
-            {/* Role prominence - larger and more impressive with creative styling */}
+            {/* Role prominence - larger and more impressive */}
             <div className="relative">
               <h1 className="text-4xl md:text-6xl font-bold text-black mb-4 leading-tight relative z-10">
                 Data Engineer
               </h1>
-              {/* Creative background elements */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-indigo-600/10 rounded-lg blur-sm -z-10 transform -rotate-1"></div>
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-blue-100/20 to-transparent rounded-lg -z-10 transform rotate-1"></div>
+              {/* Creative background elements with subtle colors */}
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-200/20 via-slate-300/20 to-slate-200/20 rounded-lg blur-sm -z-10 transform -rotate-1"></div>
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-slate-100/30 to-transparent rounded-lg -z-10 transform rotate-1"></div>
             </div>
           </div>
           
@@ -139,7 +87,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               onClick={() => scrollToSection('experience')}
-              className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-slate-800 hover:bg-slate-900 text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
             >
               View My Experience
             </Button>
@@ -147,7 +95,7 @@ const Hero = () => {
               variant="outline" 
               size="lg" 
               onClick={handleResumeDownload}
-              className="px-8 py-3 rounded-full border-2 border-slate-300 text-slate-600 hover:bg-slate-50 hover:border-slate-400 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+              className="px-8 py-3 rounded-full border-2 border-slate-300 text-slate-600 hover:bg-slate-50 hover:border-slate-400 transition-all duration-300 hover:scale-105"
             >
               Download Resume
             </Button>
@@ -156,19 +104,19 @@ const Hero = () => {
           <div className="flex justify-center space-x-8 mb-8">
             <a 
               href="https://github.com/teja-karu" 
-              className="text-slate-500 hover:text-blue-500 transition-all duration-300 hover:scale-125 transform p-2 rounded-full hover:bg-blue-50 backdrop-blur-sm"
+              className="text-slate-500 hover:text-slate-700 transition-all duration-300 hover:scale-125 transform p-2 rounded-full hover:bg-slate-100"
             >
               <Github size={28} />
             </a>
             <a 
               href="https://linkedin.com/in/karu-teja" 
-              className="text-slate-500 hover:text-blue-500 transition-all duration-300 hover:scale-125 transform p-2 rounded-full hover:bg-blue-50 backdrop-blur-sm"
+              className="text-slate-500 hover:text-slate-700 transition-all duration-300 hover:scale-125 transform p-2 rounded-full hover:bg-slate-100"
             >
               <Linkedin size={28} />
             </a>
             <a 
               href="mailto:tejakaru13@gmail.com" 
-              className="text-slate-500 hover:text-blue-500 transition-all duration-300 hover:scale-125 transform p-2 rounded-full hover:bg-blue-50 backdrop-blur-sm"
+              className="text-slate-500 hover:text-slate-700 transition-all duration-300 hover:scale-125 transform p-2 rounded-full hover:bg-slate-100"
             >
               <Mail size={28} />
             </a>

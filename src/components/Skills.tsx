@@ -1,11 +1,9 @@
 
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
-import { PieChart, Pie, Cell } from "recharts";
 import { Database, Cloud, BarChart3, Cpu } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Skills = () => {
-  // Enhanced skill categories with more data engineering focus
+  // Enhanced skill categories with subdued colors
   const skillCategories = [
     {
       title: "Data Engineering & ETL",
@@ -17,7 +15,7 @@ const Skills = () => {
         { name: "ETL/ELT Pipelines", level: 95, experience: "3+ years" },
         { name: "Data Modeling", level: 92, experience: "2+ years" }
       ],
-      color: "from-blue-500 to-indigo-600"
+      color: "from-slate-600 to-slate-700"
     },
     {
       title: "Cloud & Big Data",
@@ -29,7 +27,7 @@ const Skills = () => {
         { name: "AWS S3", level: 85, experience: "2 years" },
         { name: "Azure Data Lake", level: 88, experience: "2+ years" }
       ],
-      color: "from-purple-500 to-pink-600"
+      color: "from-slate-700 to-slate-800"
     },
     {
       title: "Programming & Analytics",
@@ -41,7 +39,7 @@ const Skills = () => {
         { name: "R", level: 80, experience: "1+ years" },
         { name: "Scala", level: 75, experience: "1 year" }
       ],
-      color: "from-green-500 to-teal-600"
+      color: "from-gray-600 to-gray-700"
     },
     {
       title: "Visualization & BI",
@@ -53,21 +51,9 @@ const Skills = () => {
         { name: "D3.js", level: 78, experience: "1 year" },
         { name: "Matplotlib/Seaborn", level: 90, experience: "2+ years" }
       ],
-      color: "from-orange-500 to-red-600"
+      color: "from-gray-700 to-gray-800"
     }
   ];
-
-  // Technology proficiency distribution
-  const techProficiencyData = [
-    { category: "Expert (90-100%)", count: 8, color: "#10B981" },
-    { category: "Advanced (80-89%)", count: 7, color: "#3B82F6" },
-    { category: "Intermediate (70-79%)", count: 5, color: "#F59E0B" },
-    { category: "Learning (60-69%)", count: 3, color: "#EF4444" }
-  ];
-
-  const chartConfig = {
-    count: { label: "Number of Technologies", color: "#10B981" }
-  };
 
   const technologies = [
     "NumPy", "Pandas", "Dask", "Polars", "FastAPI", "Docker", "Kubernetes", 
@@ -76,7 +62,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <section className="py-20 px-4 bg-slate-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
@@ -86,38 +72,6 @@ const Skills = () => {
             Comprehensive skill set spanning the entire data engineering lifecycle, 
             from ingestion and processing to analytics and visualization.
           </p>
-        </div>
-
-        {/* Skills Overview Chart */}
-        <div className="flex justify-center mb-16">
-          {/* Technology Proficiency Distribution */}
-          <Card className="shadow-xl hover:shadow-2xl transition-all duration-300 max-w-md">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Database className="text-green-600" size={24} />
-                Technology Proficiency Distribution
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ChartContainer config={chartConfig} className="h-80">
-                <PieChart>
-                  <Pie
-                    data={techProficiencyData}
-                    cx="50%"
-                    cy="50%"
-                    outerRadius={100}
-                    dataKey="count"
-                    label={({ category, count }) => `${category}: ${count}`}
-                  >
-                    {techProficiencyData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
-                    ))}
-                  </Pie>
-                  <ChartTooltip content={<ChartTooltipContent />} />
-                </PieChart>
-              </ChartContainer>
-            </CardContent>
-          </Card>
         </div>
         
         {/* Detailed Skills Grid */}
@@ -142,7 +96,7 @@ const Skills = () => {
                           <span className="text-slate-500 text-xs">
                             {skill.experience}
                           </span>
-                          <span className="text-blue-600 text-sm font-bold">
+                          <span className="text-slate-600 text-sm font-bold">
                             {skill.level}%
                           </span>
                         </div>
@@ -173,7 +127,7 @@ const Skills = () => {
               {technologies.map((tech, index) => (
                 <span 
                   key={index}
-                  className="px-4 py-2 bg-gradient-to-r from-slate-100 to-slate-200 text-slate-700 rounded-full text-sm font-medium border border-slate-300 transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white hover:scale-110 hover:shadow-lg transform cursor-pointer"
+                  className="px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-300 transition-all duration-300 hover:bg-slate-200 hover:scale-110 hover:shadow-lg transform cursor-pointer"
                 >
                   {tech}
                 </span>
