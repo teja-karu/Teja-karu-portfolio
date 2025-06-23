@@ -1,4 +1,3 @@
-
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -59,7 +58,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-4 border-slate-300 shadow-xl">
                 <img 
-                  src="/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png" 
+                  src="/Teja-karu-portfolio/lovable-uploads/bc7ae849-11c8-4663-b449-8f4f99951bf5.png" 
                   alt="Teja Karu - Data Engineer"
                   className="w-full h-full object-cover"
                 />
