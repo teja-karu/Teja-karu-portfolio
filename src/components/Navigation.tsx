@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +48,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 dark:bg-slate-950/95 dark:border-slate-800">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="text-xl font-bold text-white">
@@ -55,7 +56,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.name}
@@ -69,10 +70,12 @@ const Navigation = () => {
                 {item.name}
               </button>
             ))}
+            <ThemeToggle />
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile menu button and theme toggle */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"
@@ -86,7 +89,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-slate-900/95 border-t border-slate-700">
+          <div className="md:hidden bg-slate-900/95 border-t border-slate-700 dark:bg-slate-950/95 dark:border-slate-800">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <button
